@@ -1,0 +1,215 @@
+== minikube profile list: three profiles were attempted, none exists ==
+
+* Exiting due to MK_USAGE_NO_PROFILE: No minikube profile was found.
+* Suggestion: 
+
+    You can create one using 'minikube start'.
+    
+
+exit: 14
+
+== minikube status for the docker profile 'lab' ==
+* Profile "lab" not found. Run "minikube profile list" to view all profiles.
+  To start a cluster, run: "minikube start -p lab"
+exit: 85
+
+== delete the remains of the failed starts ==
+! "lab" profile does not exist, trying anyways.
+* Removed all traces of the "lab" cluster.
+exit: 0
+* Removed all traces of the "labkvm" cluster.
+* Removed all traces of the "labnone" cluster.
+* Removed all traces of the "minikube" cluster.
+* Successfully deleted all profiles
+exit: 0
+
+== profile list afterwards ==
+
+* Exiting due to MK_USAGE_NO_PROFILE: No minikube profile was found.
+* Suggestion: 
+
+    You can create one using 'minikube start'.
+    
+
+exit: 14
+
+== appendix: minikube's own kubectl wrapper ==
+Client Version: v1.37.0
+Kustomize Version: v5.8.1
+exit: 0
+
+== appendix: config defaults kubernetes-version ==
+* v1.37.0
+* v1.37.0-rc.1
+* v1.37.0-rc.0
+* v1.37.0-beta.0
+* v1.37.0-alpha.3
+* v1.37.0-alpha.2
+* v1.37.0-alpha.1
+* v1.36.4
+* v1.36.3
+* v1.36.2
+* v1.36.1
+* v1.36.0
+* v1.36.0-rc.1
+* v1.36.0-rc.0
+* v1.36.0-beta.0
+* v1.36.0-alpha.2
+* v1.36.0-alpha.1
+* v1.35.8
+* v1.35.7
+* v1.35.6
+* v1.35.5
+* v1.35.4
+* v1.35.3
+* v1.35.2
+* v1.35.1
+* v1.35.0
+* v1.35.0-rc.1
+* v1.35.0-rc.0
+* v1.35.0-beta.0
+* v1.35.0-alpha.3
+* v1.35.0-alpha.2
+* v1.35.0-alpha.1
+* v1.34.11
+* v1.34.10
+* v1.34.9
+* v1.34.8
+* v1.34.7
+* v1.34.6
+* v1.34.5
+* v1.34.4
+* v1.34.3
+* v1.34.2
+* v1.34.1
+* v1.34.0
+* v1.34.0-rc.2
+* v1.34.0-rc.1
+* v1.34.0-rc.0
+* v1.34.0-beta.0
+* v1.34.0-alpha.3
+* v1.34.0-alpha.2
+* v1.34.0-alpha.1
+* v1.33.13
+* v1.33.12
+* v1.33.11
+* v1.33.10
+* v1.33.9
+* v1.33.8
+* v1.33.7
+* v1.33.6
+* v1.33.5
+* v1.33.4
+* v1.33.3
+* v1.33.2
+* v1.33.1
+* v1.33.0
+* v1.33.0-rc.1
+* v1.33.0-rc.0
+* v1.33.0-beta.0
+* v1.33.0-alpha.3
+* v1.33.0-alpha.2
+* v1.33.0-alpha.1
+* v1.32.13
+* v1.32.12
+* v1.32.11
+* v1.32.10
+* v1.32.9
+* v1.32.8
+* v1.32.7
+* v1.32.6
+* v1.32.5
+* v1.32.4
+* v1.32.3
+* v1.32.2
+* v1.32.1
+* v1.32.0
+* v1.32.0-rc.2
+* v1.32.0-rc.1
+* v1.32.0-rc.0
+* v1.32.0-beta.0
+* v1.32.0-alpha.3
+* v1.32.0-alpha.2
+* v1.32.0-alpha.1
+* v1.31.14
+* v1.31.13
+* v1.31.12
+* v1.31.11
+* v1.31.10
+* v1.31.9
+* v1.31.8
+* v1.31.7
+* v1.31.6
+* v1.31.5
+* v1.31.4
+* v1.31.3
+* v1.31.2
+* v1.31.1
+* v1.31.0
+* v1.31.0-rc.1
+* v1.31.0-rc.0
+* v1.31.0-beta.0
+* v1.31.0-alpha.3
+* v1.31.0-alpha.2
+* v1.31.0-alpha.1
+* v1.30.14
+* v1.30.13
+* v1.30.12
+* v1.30.11
+* v1.30.10
+* v1.30.9
+* v1.30.8
+* v1.30.7
+* v1.30.6
+* v1.30.5
+* v1.30.4
+* v1.30.3
+* v1.30.2
+* v1.30.1
+* v1.30.0
+* v1.30.0-rc.2
+* v1.30.0-rc.1
+* v1.30.0-rc.0
+* v1.30.0-beta.0
+* v1.30.0-alpha.3
+* v1.30.0-alpha.2
+* v1.30.0-alpha.1
+* v1.29.15
+* v1.29.14
+* v1.29.13
+* v1.29.12
+* v1.29.11
+* v1.29.10
+* v1.29.9
+* v1.29.8
+* v1.29.7
+* v1.29.6
+* v1.29.5
+* v1.29.4
+* v1.29.3
+* v1.29.2
+* v1.29.1
+* v1.29.0
+* v1.29.0-rc.2
+* v1.29.0-rc.1
+* v1.29.0-rc.0
+* v1.29.0-alpha.3
+* v1.29.0-alpha.2
+* v1.29.0-alpha.1
+* v1.28.15
+* v1.28.14
+* v1.28.13
+* v1.28.12
+* v1.28.11
+* v1.28.10
+* v1.28.9
+* v1.28.8
+* v1.28.7
+* v1.28.6
+* v1.28.5
+* v1.28.4
+* v1.28.3
+* v1.28.2
+* v1.28.1
+* v1.28.0
+exit: 0

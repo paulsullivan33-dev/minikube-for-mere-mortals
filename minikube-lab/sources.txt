@@ -1,0 +1,41 @@
+Sources for the documented-only parts of this guide
+====================================================
+Read on 2026-10-30. Everything in the guide that the lab could
+not run is described from these pages and labelled
+documented-only in the text and in criteria.md.
+
+Minikube (official docs, minikube.sigs.k8s.io):
+- Dashboard handbook page — the `minikube dashboard` and
+  `minikube dashboard --url` workflows, the root/browser note:
+  https://minikube.sigs.k8s.io/docs/handbook/dashboard/
+- Accessing apps handbook page — NodePort via
+  `minikube service <name> --url`, the 30000-32767 NodePort
+  range, LoadBalancer via `minikube tunnel`, "pending"
+  external IPs without the tunnel, tunnel --cleanup:
+  https://minikube.sigs.k8s.io/docs/handbook/accessing/
+- Addons handbook index (the catalogue itself was listed
+  live by the binary; see transcript t03):
+  https://minikube.sigs.k8s.io/docs/handbook/addons/
+- Driver documentation URLs printed by the binary itself in
+  its error messages (transcripts t04, t05):
+  https://minikube.sigs.k8s.io/docs/drivers/docker/
+  https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/
+  https://minikube.sigs.k8s.io/docs/reference/drivers/none/
+
+Downloads (official release points):
+- minikube: https://storage.googleapis.com/minikube/releases/latest/
+  (binary + .sha256 sidecar)
+- kubectl: https://dl.k8s.io/release/stable.txt for the
+  current stable version number, then
+  https://dl.k8s.io/release/<version>/bin/linux/amd64/kubectl
+  (+ kubectl.sha256)
+
+Neighbours (characterised in chapter 14 from their own
+project descriptions; not run in this lab):
+- kind (Kubernetes IN Docker), a Kubernetes SIG project:
+  https://kind.sigs.k8s.io/
+- k3d, k3s in Docker: https://k3d.io/
+- Docker Desktop's built-in Kubernetes:
+  https://docs.docker.com/desktop/kubernetes/
+- k3s: https://k3s.io/ — and the series' own K3s guide,
+  linked from the chapter.

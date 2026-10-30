@@ -1,0 +1,30 @@
+== minikube start --driver=docker --profile=lab (no Docker daemon exists on this machine) ==
+* [lab] minikube v1.39.0 on Ubuntu 24.04 (amd64)
+  - MINIKUBE_HOME=/home/hatch/workspace/minikube-labwork/mh
+* Using the docker driver based on user configuration
+
+X Exiting due to PROVIDER_DOCKER_VERSION_EXIT_1: "docker version --format <no value>-<no value>:<no value>" exit status 1: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+* Documentation: https://minikube.sigs.k8s.io/docs/drivers/docker/
+
+exit: 69
+
+== appendix: the VM route on this machine — minikube start --driver=kvm2 --profile=labkvm ==
+* [labkvm] minikube v1.39.0 on Ubuntu 24.04 (amd64)
+  - MINIKUBE_HOME=/home/hatch/workspace/minikube-labwork/mh
+* Using the kvm2 driver based on user configuration
+
+X Exiting due to PR_KVM_USER_PERMISSION: libvirt group membership check failed:
+user is not a member of the appropriate libvirt group
+* Suggestion: Ensure that you are a member of the appropriate libvirt group (remember to relogin for group changes to take effect!)
+* Documentation: https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/
+* Related issues:
+  - https://github.com/kubernetes/minikube/issues/5617
+  - https://github.com/kubernetes/minikube/issues/10070
+
+exit: 67
+
+== prerequisites the none driver would have wanted next ==
+conntrack  /usr/sbin/conntrack
+crictl     not installed
+socat      /usr/bin/socat
+iptables   /usr/sbin/iptables

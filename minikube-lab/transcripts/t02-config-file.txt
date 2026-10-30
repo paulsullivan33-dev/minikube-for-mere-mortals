@@ -1,0 +1,90 @@
+== all of these run with MINIKUBE_HOME=/home/hatch/workspace/minikube-labwork/mh (a scratch directory) ==
+
+== config view on a fresh home (nothing set yet) ==
+exit: 0
+
+== set four values ==
+! These changes will take effect upon a minikube delete and then a minikube start
+! These changes will take effect upon a minikube delete and then a minikube start
+! These changes will take effect upon a minikube delete and then a minikube start
+
+== get them back ==
+driver = docker
+cpus = 2
+memory = 3072
+kubernetes-version = v1.37.0
+
+== config view ==
+- cpus: 2
+- driver: docker
+- kubernetes-version: v1.37.0
+- memory: 3072
+
+== the file minikube actually wrote: $MINIKUBE_HOME/config/config.json ==
+cat: /home/hatch/workspace/minikube-labwork/mh/config/config.json: No such file or directory
+
+== defaults the binary knows (driver and memory) ==
+* virtualbox
+* kvm2
+* qemu2
+* qemu
+* vmware
+* none
+* docker
+* podman
+* ssh
+X Exiting due to MK_USAGE: error getting defaults: memory is not a valid option for the `defaults` command; to see valid options run `minikube config defaults -h`
+
+
+
+== unset one value ==
+- driver: docker
+- kubernetes-version: v1.37.0
+- cpus: 2
+
+== an invalid property name ==
+
+X Exiting due to MK_CONFIG_SET: Set failed: find settings for "banana" value of "3": property name "banana" not found
+* 
+╭─────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                             │
+│    * If the above advice does not help, please let us know:                                 │
+│      https://github.com/kubernetes/minikube/issues/new/choose                               │
+│                                                                                             │
+│    * Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    * Please also attach the following file to the GitHub issue:                             │
+│    * - /tmp/minikube_config_7a01166d370ff7a745b8f35c87c796de3a19aad2_0.log                  │
+│                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────╯
+
+exit: 10
+
+== an invalid driver value ==
+
+X Exiting due to MK_CONFIG_SET: Set failed: run validations for "driver" with value of "banana": [driver "banana" is not supported]
+* 
+╭─────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                             │
+│    * If the above advice does not help, please let us know:                                 │
+│      https://github.com/kubernetes/minikube/issues/new/choose                               │
+│                                                                                             │
+│    * Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│    * Please also attach the following file to the GitHub issue:                             │
+│    * - /tmp/minikube_config_cbad2f8c194e776feb0e6a3176b1f70d65ffb1d2_0.log                  │
+│                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────╯
+
+exit: 10
+
+== addendum: where the config file really lives ==
+With MINIKUBE_HOME set, minikube nests its state in a .minikube folder inside it.
+The file is $MINIKUBE_HOME/.minikube/config/config.json and now contains:
+{
+    "cpus": "2",
+    "driver": "docker",
+    "kubernetes-version": "v1.37.0"
+}
+== a note on the default home ==
+This shared lab machine already had a ~/.minikube from other work (dated 2026-10-17,
+with a v1.31.0 kubectl/kubeadm cache) — which is why this lab kept its own state
+inside MINIKUBE_HOME and never touched it.

@@ -1,0 +1,77 @@
+== all of these run with KUBECONFIG=/home/hatch/workspace/minikube-labwork/kubeconfig-empty (a file that does not exist yet) ==
+
+== kubectl version --client ==
+Client Version: v1.37.2
+Kustomize Version: v5.8.1
+
+== kubectl config view: the empty house ==
+apiVersion: v1
+clusters: null
+contexts: null
+current-context: ""
+kind: Config
+users: null
+exit: 0
+ls: cannot access '/home/hatch/workspace/minikube-labwork/kubeconfig-empty': No such file or directory
+exit of ls: 2 (kubectl did not even create the file)
+
+== build a context by hand: cluster, user, context ==
+Cluster "practice" set.
+User "practice-user" set.
+Context "practice" created.
+Switched to context "practice".
+
+== kubectl config view now ==
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://127.0.0.1:8443
+  name: practice
+contexts:
+- context:
+    cluster: practice
+    user: practice-user
+  name: practice
+current-context: practice
+kind: Config
+users:
+- name: practice-user
+  user:
+    token: REDACTED
+
+== the kubeconfig file kubectl wrote ==
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://127.0.0.1:8443
+  name: practice
+contexts:
+- context:
+    cluster: practice
+    user: practice-user
+  name: practice
+current-context: practice
+kind: Config
+users:
+- name: practice-user
+  user:
+    token: example-token-not-real
+
+== ask the 'cluster' something: kubectl cluster-info ==
+E1030 23:23:52.999147   86839 memcache.go:381] "Couldn't get current server API group list" err="Get \"https://127.0.0.1:8443/api?timeout=32s\": dial tcp 127.0.0.1:8443: connect: connection refused"
+E1030 23:23:52.999682   86839 memcache.go:381] "Couldn't get current server API group list" err="Get \"https://127.0.0.1:8443/api?timeout=32s\": dial tcp 127.0.0.1:8443: connect: connection refused"
+E1030 23:23:53.001099   86839 memcache.go:381] "Couldn't get current server API group list" err="Get \"https://127.0.0.1:8443/api?timeout=32s\": dial tcp 127.0.0.1:8443: connect: connection refused"
+E1030 23:23:53.001251   86839 memcache.go:381] "Couldn't get current server API group list" err="Get \"https://127.0.0.1:8443/api?timeout=32s\": dial tcp 127.0.0.1:8443: connect: connection refused"
+E1030 23:23:53.002604   86839 memcache.go:381] "Couldn't get current server API group list" err="Get \"https://127.0.0.1:8443/api?timeout=32s\": dial tcp 127.0.0.1:8443: connect: connection refused"
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+The connection to the server 127.0.0.1:8443 was refused - did you specify the right host or port?
+exit: 1
+
+== addendum: who hid the token? ==
+In the config view output above, the token shows as <redacted> — that is kubectl itself:
+writing 'kubectl config view --minify' straight to a file and counting gives 0 occurrences
+of the token in the view output, while the kubeconfig file itself contains it once,
+in plain text. Moral: config view is safe to show people; the file is a credential — guard it.

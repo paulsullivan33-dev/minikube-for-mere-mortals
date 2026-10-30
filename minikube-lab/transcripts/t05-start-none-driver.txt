@@ -1,0 +1,18 @@
+== minikube start --driver=none --profile=labnone (stdin closed, 90s cap) ==
+* [labnone] minikube v1.39.0 on Ubuntu 24.04 (amd64)
+  - MINIKUBE_HOME=/home/hatch/workspace/minikube-labwork/mh
+* Using the none driver based on user configuration
+
+X Exiting due to DRV_UNSUPPORTED_PROFILE: The 'none driver does not support multiple profiles: https://minikube.sigs.k8s.io/docs/reference/drivers/none/
+
+exit: 56
+
+== second attempt: no --profile (the default profile name is 'minikube') ==
+* minikube v1.39.0 on Ubuntu 24.04 (amd64)
+  - MINIKUBE_HOME=/home/hatch/workspace/minikube-labwork/mh
+* Using the none driver based on user configuration
+! Using the 'containerd' runtime with the 'none' driver is an untested configuration!
+
+X Exiting due to GUEST_MISSING_CONNTRACK: Sorry, Kubernetes 1.37.0 requires crictl to be installed in root's path
+
+exit: 86

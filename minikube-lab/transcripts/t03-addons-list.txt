@@ -1,0 +1,47 @@
+== minikube addons list (no cluster exists) ==
+┌─────────────────────────────┬────────────────────────────────────────┐
+│         ADDON NAME          │               MAINTAINER               │
+├─────────────────────────────┼────────────────────────────────────────┤
+│ ambassador                  │ 3rd party (Ambassador)                 │
+│ amd-gpu-device-plugin       │ 3rd party (AMD)                        │
+│ auto-pause                  │ minikube                               │
+│ cloud-spanner               │ Google                                 │
+│ csi-hostpath-driver         │ Kubernetes                             │
+│ dashboard                   │ Kubernetes                             │
+│ default-storageclass        │ Kubernetes                             │
+│ efk                         │ 3rd party (Elastic)                    │
+│ freshpod                    │ Google                                 │
+│ gcp-auth                    │ Google                                 │
+│ gvisor                      │ minikube                               │
+│ headlamp                    │ 3rd party (kinvolk.io)                 │
+│ inaccel                     │ 3rd party (InAccel [info@inaccel.com]) │
+│ ingress                     │ Kubernetes                             │
+│ ingress-dns                 │ minikube                               │
+│ inspektor-gadget            │ 3rd party (inspektor-gadget.io)        │
+│ istio                       │ 3rd party (Istio)                      │
+│ istio-provisioner           │ 3rd party (Istio)                      │
+│ kong                        │ 3rd party (Kong HQ)                    │
+│ kubeflow                    │ 3rd party                              │
+│ kubetail                    │ 3rd party (kubetail.com)               │
+│ kubevirt                    │ 3rd party (KubeVirt)                   │
+│ logviewer                   │ 3rd party (unknown)                    │
+│ metallb                     │ 3rd party (MetalLB)                    │
+│ metrics-server              │ Kubernetes                             │
+│ nvidia-device-plugin        │ 3rd party (NVIDIA)                     │
+│ nvidia-driver-installer     │ 3rd party (NVIDIA)                     │
+│ nvidia-gpu-device-plugin    │ 3rd party (NVIDIA)                     │
+│ olm                         │ 3rd party (Operator Framework)         │
+│ pod-security-policy         │ 3rd party (unknown)                    │
+│ portainer                   │ 3rd party (Portainer.io)               │
+│ registry                    │ minikube                               │
+│ registry-aliases            │ 3rd party (unknown)                    │
+│ registry-creds              │ 3rd party (UPMC Enterprises)           │
+│ storage-provisioner         │ minikube                               │
+│ storage-provisioner-rancher │ 3rd party (Rancher)                    │
+│ traefik                     │ 3rd party (Traefik Labs)               │
+│ volcano                     │ third-party (volcano)                  │
+│ volumesnapshots             │ Kubernetes                             │
+│ yakd                        │ 3rd party (marcnuri.com)               │
+└─────────────────────────────┴────────────────────────────────────────┘
+E1030 23:23:10.401218   86431 addons_list.go:158] list profiles returned error: profiles dir /home/hatch/workspace/minikube-labwork/mh/.minikube/profiles does not exist
+exit: 0

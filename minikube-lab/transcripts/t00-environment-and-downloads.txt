@@ -1,0 +1,67 @@
+== date and machine ==
+Fri Oct 30 23:20:44 UTC 2026
+Linux htch-runtime 7.0.0-39-generic #1 SMP PREEMPT_DYNAMIC Thu Sep 24 08:42:15 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+2
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       6.8Gi       300Mi       118Mi       1.0Gi       953Mi
+
+== virtualisation device ==
+ls: cannot access '/dev/kvm': No such file or directory
+exit: 2
+
+== docker client, daemon ==
+Client:
+ Version:           29.1.3
+ API version:       1.52
+ Go version:        go1.24.4
+ Git commit:        29.1.3-0ubuntu3~24.04.2
+ Built:             Wed Apr 29 16:41:06 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+Client:
+ Version:    29.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+
+== download minikube (official release bucket) ==
+total 139272
+-rw-rw---- 1 root root 142610232 Oct 30 23:21 minikube-linux-amd64
+-rw-rw---- 1 root root        65 Oct 30 23:21 minikube-linux-amd64.sha256
+
+== verify checksum ==
+b738496da01be06bbaf80c688f57ce25acd3849fbb518155f3a88e03ef555aa4
+b738496da01be06bbaf80c688f57ce25acd3849fbb518155f3a88e03ef555aa4  minikube-linux-amd64
+sha256sum: minikube-linux-amd64.sha256: no properly formatted checksum lines found
+
+== checksum comparison, done properly ==
+MATCH: published SHA-256 equals computed SHA-256
+
+== minikube version ==
+minikube version: v1.39.0
+commit: 7a9f6a841470a207de8cf4bafcccee0969d8ba10
+
+stable Kubernetes (dl.k8s.io/release/stable.txt): v1.37.2
+-rw-rw---- 1 root root 61890722 Oct 30 23:21 kubectl
+-rw-rw---- 1 root root       64 Oct 30 23:21 kubectl.sha256
+
+== kubectl checksum (this file has the standard format) ==
+kubectl: OK
+
+== kubectl client version ==
+Client Version: v1.37.2
+Kustomize Version: v5.8.1
+clientVersion:
+  buildDate: "2026-10-27T12:04:48Z"
+  compiler: gc
+  gitCommit: c50e5395f1ae2d4a2c05f28fdcc38c0916cc1a32
+  gitTreeState: clean
+  gitVersion: v1.37.2
+  goVersion: go1.26.10
+  major: "1"
+  minor: "37"
+  platform: linux/amd64
+kustomizeVersion: v5.8.1
+

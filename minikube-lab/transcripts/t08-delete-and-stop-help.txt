@@ -1,0 +1,32 @@
+== minikube delete --help ==
+Deletes a local Kubernetes cluster. This command deletes the VM, and removes all
+associated files.
+
+Options:
+    --all=false:
+	Set flag to delete all profiles
+
+    -o, --output='text':
+	Format to print stdout in. Options include: [text,json]
+
+    --purge=false:
+	Set this flag to delete the '.minikube' folder from your user directory.
+
+Usage:
+  minikube delete [flags] [options]
+
+Use "minikube options" for a list of global command-line options (applies to all commands).
+
+== minikube stop --help (first lines) ==
+Stops a local Kubernetes cluster. This command stops the underlying VM or container, but keeps user data intact. The cluster can be started again with the "start" command.
+
+Options:
+    --all=false:
+	Set flag to stop all profiles (clusters)
+
+    --cancel-scheduled=false:
+	cancel any existing scheduled stop requests
+
+    --keep-context-active=false:
+	keep the kube-context active after cluster is stopped. Defaults to false.
+
